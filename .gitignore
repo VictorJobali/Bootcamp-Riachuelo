@@ -1,0 +1,14 @@
+# Arquivos/pastas do Eclipse
+.metadata/
+.classpath
+.project
+.settings/
+
+# Saída de compilação
+bin/
+target/
+out/
+
+# Arquivos de IDE
+*.iml
+.idea/
