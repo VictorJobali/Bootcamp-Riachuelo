@@ -5,62 +5,15 @@ public class Main {
 	public static void main(String[] args) {	
 
 		var scanner = new Scanner(System.in);
+		System.out.println("Digite um número:");
+		var n1 = scanner.nextInt();
 		
-		/*
-		   =======================================
-			Exemplo utilizando operador de negação
-		   =======================================
-		
-		var name = "";  
-		while (!name.equalsIgnoreCase("exit")) {
-			System.out.println("Informe um nome:");
-			name = scanner.next();
-			System.out.println(name);
-		}
-		
-		System.out.println("Você informou o nome correto!");
-		
-		*/
-		
-		/*
-		  =====================================
-		  Exemplo utilizando a keyword 'break'
-		  =====================================
-		  
-		var name = "";  
-		while (true) {
-			System.out.println("Informe um nome:");
-			name = scanner.next();
-			System.out.println(name);
+		for(var i = 1; i <= 10; i++) {
+			var result = n1 * i;
+			System.out.printf("%s * %s = %s\n", n1, i, result);
 			
-			if(name.equalsIgnoreCase("exit")) break;
-		
 		}
-		
-		System.out.println("Você informou o nome correto!");
-		
-		*/
-		
-		/*
-		 =========================== 
-		 Exemplo usando 'do...while' 
-		 =========================== 
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		*/
-		var name = "exit";
-		do {
-			System.out.println("Informe um nome:");
-			name = scanner.next();
-			System.out.println(name);
-		
-		} while (!name.equalsIgnoreCase("exit"));
-		
+
 		scanner.close();
 		
 	}
