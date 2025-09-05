@@ -6,29 +6,21 @@ public class Main {
 
 		var scanner = new Scanner(System.in);
 
-		System.out.print("Informe o primeiro número:");
+		System.out.print("Informe um número: ");
 		var n1 = scanner.nextInt();
-		var n2 = 0;
-		while(true) {
-			System.out.print("Informe o segundo número:");
-			n2 = scanner.nextInt();
-			if(n2 > n1) break;
-			System.out.printf("Informe um número maior que %s\n",n1);
-		}
-		System.out.print("Você quer par ou ímpar?");
-		var choice = scanner.next();
-		if (choice.equalsIgnoreCase("par")) {
-			for (var i = n1; i <= n2 ; i++) {
-				if (i % 2 == 0) {
-					System.out.println(i);
-				}
+		System.out.print("Informe um valor para o segundo número: ");
+		var n2 = scanner.nextInt();
+		while (true) {
+			while (n2 < n1 || n2 % n1 == 0) {
+				System.out.println("Informe um número maior que o primeiro que você digitou: ");
+				n2 = scanner.nextInt();
 			}
-		} else {
-			for (var i = n1; i <= n2; i++) {
-				if(i % 2 == 1) {
-					System.out.println(i);
-				}
-			}
+			
+			if(!(n2 % n1 == 0)) {
+				System.out.println("Resto diferente de 0");
+				break;
+			} 
+			
 		}
 		
 		scanner.close();
