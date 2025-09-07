@@ -2,14 +2,12 @@ public class Main {
 	
 	public static void main(String[] args) {	
 
-		var male = new Person("João");
-		male.incAge();
-		
-		var female = new Person("Maria");
-		female.incAge();
-		
-		System.out.println("Male name: " + male.getName() + ", age: " + male.getAge());
-		System.out.println("Female name: " + female.getName() + ", age: " + female.getAge());
+		var person = new Person("João");
+		System.out.println(person);
+		System.out.println(person.getInfo()); 
+		System.out.println(person.name());
+		System.out.println(person.age());
+		//var newPerson = new Person(person.name(), 13);
 		
 	}
 
